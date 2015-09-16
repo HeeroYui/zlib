@@ -530,7 +530,7 @@ int do_extract_onefile(uf,filename,opt_extract_without_path,opt_overwrite,passwo
         return 1;
 }
 
-
+#if MINIZIP_ENABLE_MAIN
 int main(argc,argv)
     int argc;
     char *argv[];
@@ -658,3 +658,6 @@ int main(argc,argv)
 
     return ret_value;
 }
+
+#endif
+
